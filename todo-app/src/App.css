@@ -81,8 +81,8 @@ nav{
 .Task:nth-child(4n + 2){
   background: linear-gradient(
     90deg,
-    rgb(255, 12, 174) 0%,
-    rgb(255, 27, 148) 100%
+    rgb(255, 2, 2) 0%,
+    rgb(255, 91, 91) 100%
   );
 }
 .Task:nth-child(4n + 3){
@@ -109,15 +109,15 @@ nav{
 }
 
 .button-submit{
-  padding: 16px;
+  padding: 10px;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
   background: linear-gradient(
     90deg,
-    rgb(189, 47, 255) 0%,
-    rgb(118, 27, 255) 100%
+    rgb(1, 185, 217) 0%,
+    rgb(132, 138, 255) 100%
   );
   color: #fff;
   text-transform: capitalize;
@@ -133,8 +133,8 @@ nav{
   outline: none;
   background: linear-gradient(
     90deg,
-    rgb(189, 47, 255) 0%,
-    rgb(118, 27, 255) 100%
+    rgb(1, 185, 217) 0%,
+    rgb(132, 138, 255) 100%
   );
   color: #fff;
   text-transform: capitalize;
@@ -148,15 +148,15 @@ nav{
   outline: none;
   background: linear-gradient(
     90deg,
-    rgb(189, 47, 255) 0%,
-    rgb(118, 27, 255) 100%
+    rgb(1, 185, 217) 0%,
+    rgb(132, 138, 255) 100%
   );
   color: #fff;
   text-transform: capitalize;
 }
 
 .add-input{
-  padding: 14px 32px 14px 16px;
+  padding: 8px;
   margin-bottom: 10px;
   border-radius: 4px 0 0 4px;
   border: 2px solid #5d0cff;

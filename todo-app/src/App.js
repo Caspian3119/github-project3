@@ -23,12 +23,12 @@ const App = () => {
     {
       id: uuidv4(),
       name: "Clean bathroom",
-      status: "Pending",
+      status: "Done",
     },
     {
       id: uuidv4(),
       name: "Clean PC",
-      status: "Pending",
+      status: "Done",
     },
   ];
 
@@ -78,10 +78,10 @@ const App = () => {
       id: uuidv4(),
       ...addTask,
     };
-    const checkDup = tasks.filter((task) => task.name.toLowerCase().replace(/[^\w\s]/gi, "") === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
+    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim() === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
     if(checkDup.length <= 0 && newTask.name !== ""){
       if(newTasks.name === ""){
-        alert("NO INPUT")
+        alert("Please Input a Task")
       }
       else{
         const newTask = [...tasks, newTasks];
@@ -90,7 +90,7 @@ const App = () => {
       }
     }
     else{
-      alert("EXISTING")
+      alert("Task is already existing")
     }
     console.log(newTasks.name)
   };
