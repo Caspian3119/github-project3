@@ -105,8 +105,6 @@ const App = () => {
         <Link to="Pending" className="nav-link"> Pending Tasks</Link>
       </nav>
 
-      {/* Routes - Done Task, Pending Task, All Task */}
-
       <Routes>
         <Route path="/" element={<TaskList tasks={tasks} completeTask={completeTaskHandler}  deleteClick = {handleDeleteClick} editClick={handleEditClick}/>} />
         <Route path=":status"element={<TaskPage tasks={tasks} completeTask={completeTaskHandler}  deleteClick = {handleDeleteClick} editClick={handleEditClick}/>}/>
