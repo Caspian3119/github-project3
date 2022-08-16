@@ -8,7 +8,7 @@ const TaskPage = ({ tasks, completeTask , editClick, deleteClick}) => {
 
   return (
     <div>
-      {tasks.length === 0 ? (<p className="tasks">No task availble</p>) : (tasks
+      {(tasks
         .filter((task) => task.status === filter)
         .map((task) => (
           <Task
