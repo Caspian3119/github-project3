@@ -5,16 +5,19 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.title{
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
 body{
   background: linear-gradient(
     90deg,
-    rgb(2, 255, 213) 0%,
+    rgb(0, 112, 197) 0%,
     rgb(163, 172, 255) 100%
   );
-}
-
-h1{
-  color: #fff;
 }
 
 nav{
@@ -56,7 +59,7 @@ nav{
     rgba(255, 118, 20, 1) 0%,
     rgba(255, 84, 17, 1) 100%
   );
-
+  font-size: 20px;
   padding: 16px;
   border-radius: 5px;
   width: 90%;
@@ -70,23 +73,23 @@ nav{
 .Task:nth-child(4n + 1){
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(101, 24, 255) 0%,
+    rgb(138, 0, 223) 100%
   );
 }
 
 .Task:nth-child(4n + 2){
   background: linear-gradient(
     90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
+    rgb(255, 12, 174) 0%,
+    rgb(255, 27, 148) 100%
   );
 }
 .Task:nth-child(4n + 3){
   background: linear-gradient(
     90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
+    rgb(0, 76, 255) 0%,
+    rgb(44, 135, 255) 100%
   );
 }
 
@@ -153,7 +156,6 @@ nav{
 }
 
 .add-input{
-  margin-top: 10px;
   padding: 14px 32px 14px 16px;
   margin-bottom: 10px;
   border-radius: 4px 0 0 4px;
@@ -172,11 +174,11 @@ nav{
   body{
     background: linear-gradient(
       90deg,
-      rgb(2, 234, 195) 100%,
-      rgb(163, 172, 255) 0%
+      rgb(0, 112, 197) 0%,
+      rgb(163, 172, 255) 100%
     );
   }
-
+ 
   .add-input{
     width: 200px;
   }
@@ -184,6 +186,7 @@ nav{
     padding: 16px;
     border-radius: 5px;
     width: 90%;
+    font-size: 16px;
   }
   
   .icons{
@@ -203,11 +206,12 @@ nav{
   .App{
     width:95%;
   }
+  
   body{
     background: linear-gradient(
       90deg,
-      rgb(2, 234, 195) 100%,
-      rgb(163, 172, 255) 0%
+      rgb(0, 112, 197) 0%,
+      rgb(163, 172, 255) 100%
     );
   }
 
@@ -218,13 +222,14 @@ nav{
     padding: 16px;
     border-radius: 5px;
     width: 98%;
+    font-size: 18px;
   }
   
   .icons{
     font-size: 25px;
   }
   .nav-link{
-    font-size: 15px;
+    font-size: 23px;
   }
 
   nav{

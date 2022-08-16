@@ -76,7 +76,7 @@ const App = () => {
       id: uuidv4(),
       ...addTask,
     };
-    const checkDup = tasks.filter((task) => task.name.trim().toLowerCase().replace(/[^\w\s]/gi, "") === newTasks.name.trim().toLowerCase().replace(/[^\w\s]/gi, ""))
+    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim().replace(/[^\w\s]/gi, "") === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
     if(checkDup.length <= 0 && newTask.name !== ""){
       if(newTasks.name === ""){
         alert("NO INPUT")
@@ -87,17 +87,15 @@ const App = () => {
         setNewTask(false)
       }
     }
-    else if(newTasks.name === ""){
-     alert("NO INPUT")
-    }
     else{
       alert("EXISTING")
     }
+    console.log(newTasks.name)
   };
 
   return (
     <div className="App">
-      <h1 className="title">Tasks For The Day</h1>
+      <p className="title">Tasks For Today</p>
       <br />
       {addTask ? <AddTask submit={addTask}/> : ""}
       {editForm ? <EditTask submit={editCurrTask} cancel={cancelEditTask} {...editTask} /> : ""}
