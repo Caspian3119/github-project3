@@ -78,7 +78,7 @@ const App = () => {
       id: uuidv4(),
       ...addTask,
     };
-    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim() === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
+    const checkDup = tasks.filter((task) => task.name.toLowerCase().replace(/[^\w\s]/gi, "") === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
     if(checkDup.length <= 0 && newTask.name !== ""){
       if(newTasks.name === ""){
         alert("NO INPUT")
