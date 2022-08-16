@@ -33,15 +33,5 @@ const Task = (props) => {
       </div>
     )
   }
- 
-
-// const Task = (props) => {
-//   return (
-//     <div className="Task">
-//       <h2>{props.name}</h2>
-//       <p>Done: {props.status.toString()}</p>
-//     </div>
-//   )
-// }
 
 export default Task

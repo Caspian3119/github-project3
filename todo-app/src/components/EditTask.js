@@ -46,7 +46,6 @@ const EditItemForm = ({submit, id, cancel, name}) => {
             <button className="button-save" onClick={onEditTask}>Save</button>
             <button className="button-cancel" onClick={onCancelEdit}>Cancel</button>
           </div>
-
         </form>
     </div>
   )
