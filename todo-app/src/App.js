@@ -40,25 +40,14 @@ const App = () => {
     name: "",
     status: "Pending"
   }); 
+
   const completeTaskHandler = (id) => {
     let newState = [...tasks];
     const index = newState.findIndex((task) => task.id === id);
     newState[index].status = "Done";
     setTasks(newState);
   };
-  const editCurrTask = (editedTask) => {
-    const indexOfItem = tasks.findIndex((task) => task.id === editedTask.id);
-    const newTask = [...tasks]
-    newTask.splice(indexOfItem, 1, editedTask);
-    setTasks(newTask);
-    setEditForm(false)
-  };
-
-  const handleDeleteClick = (id) => {
-    const newTask = tasks.filter((task) => task.id !== id);
-    setTasks(newTask);
-  };
-
+  
   const handleEditClick = (id) => {
     const indexOfItem = tasks.findIndex((task) => task.id === id);
     const editTask = tasks[indexOfItem];
@@ -67,8 +56,21 @@ const App = () => {
     setEditTask(editTask);
   };
 
+  const handleDeleteClick = (id) => {
+    const newTask = tasks.filter((task) => task.id !== id);
+    setTasks(newTask);
+  };
+
   const cancelEditTask = () => {
     setEditForm(false);
+  };
+
+  const editCurrTask = (editedTask) => {
+    const indexOfItem = tasks.findIndex((task) => task.id === editedTask.id);
+    const newTask = [...tasks]
+    newTask.splice(indexOfItem, 1, editedTask);
+    setTasks(newTask);
+    setEditForm(false)
   };
 
   const addTask = (addTask) => {
@@ -76,7 +78,7 @@ const App = () => {
       id: uuidv4(),
       ...addTask,
     };
-    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim().replace(/[^\w\s]/gi, "") === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
+    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim() === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
     if(checkDup.length <= 0 && newTask.name !== ""){
       if(newTasks.name === ""){
         alert("NO INPUT")
