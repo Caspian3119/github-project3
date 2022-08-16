@@ -1,0 +1,234 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background: linear-gradient(
+    90deg,
+    rgb(2, 255, 213) 0%,
+    rgb(163, 172, 255) 100%
+  );
+}
+
+h1{
+  color: #fff;
+}
+
+nav{
+  margin: auto;
+  font-size: 30px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.nav-link{
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.App {
+  width: 500px;
+  height: auto;
+  background: #2b3151;
+  text-align: center;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding: 10px 0 32px 0;
+  box-shadow: 5px 10px 10px #888888
+}
+
+.tasks{
+  font-size: 20px;
+  color: #fff;
+}
+
+.Task {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.Task .task-name{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Task:nth-child(4n + 1){
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.Task:nth-child(4n + 2){
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+.Task:nth-child(4n + 3){
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+
+.icons{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.icons :hover{
+  font-size: 26px;
+}
+
+.buttons{
+  padding: 2px;
+  justify-content: space-between;
+}
+
+.button-submit{
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(189, 47, 255) 0%,
+    rgb(118, 27, 255) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.button-save{
+  width: 60px;
+  margin: 5px 5px 0 0;
+  padding: 10px;
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(189, 47, 255) 0%,
+    rgb(118, 27, 255) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.button-cancel{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(189, 47, 255) 0%,
+    rgb(118, 27, 255) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.add-input{
+  margin-top: 10px;
+  padding: 14px 32px 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+  justify-content: right;
+}
+
+@media screen and (max-width: 321px){
+  .App{
+    width:90%;
+  }
+  body{
+    background: linear-gradient(
+      90deg,
+      rgb(2, 234, 195) 100%,
+      rgb(163, 172, 255) 0%
+    );
+  }
+
+  .add-input{
+    width: 200px;
+  }
+  .Task {
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+  
+  .icons{
+    font-size: 23px;
+
+  }
+  .nav-link{
+    font-size: 15px;
+  }
+
+  nav{
+    padding-top:5px;
+    font-size: 20px;
+  } 
+}
+ @media screen and (min-width: 375px) and (max-width: 426px){
+  .App{
+    width:95%;
+  }
+  body{
+    background: linear-gradient(
+      90deg,
+      rgb(2, 234, 195) 100%,
+      rgb(163, 172, 255) 0%
+    );
+  }
+
+  .add-input{
+    width: 200px;
+  }
+  .Task {
+    padding: 16px;
+    border-radius: 5px;
+    width: 98%;
+  }
+  
+  .icons{
+    font-size: 25px;
+  }
+  .nav-link{
+    font-size: 15px;
+  }
+
+  nav{
+    padding-top:5px;
+    font-size: 20px;
+  } 
+ }
