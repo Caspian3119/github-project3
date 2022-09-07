@@ -41,6 +41,7 @@ const App = () => {
     status: "Pending"
   }); 
 
+  //Function for checking/completing the tasks
   const completeTaskHandler = (id) => {
     let newState = [...tasks];
     const index = newState.findIndex((task) => task.id === id);
@@ -48,6 +49,7 @@ const App = () => {
     setTasks(newState);
   };
   
+  //Edit button function
   const handleEditClick = (id) => {
     const indexOfItem = tasks.findIndex((task) => task.id === id);
     const editTask = tasks[indexOfItem];
@@ -56,15 +58,18 @@ const App = () => {
     setEditTask(editTask);
   };
 
+  //Delete button function
   const handleDeleteClick = (id) => {
     const newTask = tasks.filter((task) => task.id !== id);
     setTasks(newTask);
   };
 
+  //Cancel button function
   const cancelEditTask = () => {
     setEditForm(false);
   };
 
+  //Function for editing the current task selected
   const editCurrTask = (editedTask) => {
     const indexOfItem = tasks.findIndex((task) => task.id === editedTask.id);
     const newTask = [...tasks]
@@ -73,12 +78,13 @@ const App = () => {
     setEditForm(false)
   };
 
+  //Function for adding a new task
   const addTask = (addTask) => {
     const newTasks = {
       id: uuidv4(),
       ...addTask,
     };
-    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim() === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
+    const checkDup = tasks.filter((task) => task.name.toLowerCase().trim().replace(/[^\w\s]/gi, "") === newTasks.name.toLowerCase().trim().replace(/[^\w\s]/gi, ""))
     if(checkDup.length <= 0 && newTask.name !== ""){
       if(newTasks.name === ""){
         alert("Please Input a Task")
@@ -92,15 +98,24 @@ const App = () => {
     else{
       alert("Task is already existing")
     }
-    console.log(newTasks.name)
   };
 
   return (
     <div className="App">
       <p className="title">Tasks For Today</p>
-      <br />
-      {addTask ? <AddTask submit={addTask}/> : ""}
-      {editForm ? <EditTask submit={editCurrTask} cancel={cancelEditTask} {...editTask} /> : ""}
+
+      {
+         addTask ?
+         <AddTask submit={ addTask } /> :
+         ""
+      }
+
+      {
+        editForm ? 
+        <EditTask submit={editCurrTask} cancel={cancelEditTask} {...editTask} /> : 
+        ""
+      }
+
       <nav>
         <Link to="" className="nav-link">All Tasks</Link> |
         <Link to="Done" className="nav-link"> Done Tasks</Link> |

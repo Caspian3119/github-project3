@@ -38,10 +38,10 @@ const EditItemForm = ({submit, id, cancel, name}) => {
   };
  
   return (
-    <div className= "form">
+    <div className= "edit-form">
         <form>
-          <input className = "add-input"name="name" type="text" value={valueName} onChange={onChange} />
-          <br />
+          <p className = "edit-task">Edit Task</p>
+          <input className = "add-input" name="name" type="text" value={valueName} onChange={onChange} />
           <div className="formButtons">
             <button className="button-save" onClick={onEditTask}>Save</button>
             <button className="button-cancel" onClick={onCancelEdit}>Cancel</button>
